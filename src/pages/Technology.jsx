@@ -3,7 +3,7 @@ import React from 'react'
 const Technology = () => {
   return (
     <div>
-      <p>Technology dey </p>
+      <p>Technology dey be</p>
     </div>
   )
 }
