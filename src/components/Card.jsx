@@ -14,6 +14,8 @@ const Card = ({ image, category, date, title, description, author }) => {
       <div className="flex flex-col flex-grow p-4">
         <div className="flex justify-between items-center mb-3">
           <Link
+            
+            
             className={`text-xs px-3 py-1 rounded-full font-medium transition ${
               categoryColors[category] || "bg-gray-100 text-gray-600"
             }`}
@@ -41,6 +43,7 @@ const Card = ({ image, category, date, title, description, author }) => {
     </div>
   );
 };
+
 
 const categoryColors = {
   Featured: "bg-blue-100 text-blue-600 hover:bg-blue-200",

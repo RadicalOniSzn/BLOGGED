@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const Politics = () => {
   return (
@@ -9,9 +10,9 @@ const Politics = () => {
 
       <div className="w-full">
         <img
-          src="./Imagee.png"
+          src="./ChatGPT Image Sep 16, 2025, 01_05_03 PM.png"
           alt="Climate change in West Africa"
-          className="w-full h-[400px] object-cover"
+          className="w-full h-[450px] object-cover"
         />
       </div>
 
@@ -22,41 +23,28 @@ const Politics = () => {
         </Link>
 
         <h1 className="text-4xl font-bold mt-4 mb-6 leading-tight">
-          Climate Change Policies Face New Challenges in Developing Countries
-          Amidst Environmental Regulation Implementation within West Africa
+        Nigeria Suspends FOB Levy After Backlash
+          
         </h1>
 
         <div className="flex items-center gap-2 text-gray-500 text-sm mb-8">
-          <p>By Sarah Johnson</p>
+          <p>By Ahmed Saraki</p>
           <span>•</span>
-          <p>June 15, 2023</p>
+          <p>September 15, 2025</p>
         </div>
 
         <article className="prose prose-lg text-gray-700 leading-relaxed">
           <p>
-            West Africa is among the most climate-vulnerable regions in the
-            world. Increasing desertification in the Sahel, rising sea levels
-            along the Atlantic coast, unpredictable rainfall patterns, and
-            severe droughts are already undermining food security and displacing
-            communities. Agriculture, which employs a significant proportion of
-            the region’s population, is highly sensitive to climate fluctuations.
+          Nigeria has suspended a 4% Free on Board (FOB) levy on all imported goods following strong criticism from importers, business groups, and other stakeholders. The levy was introduced by the Nigeria Customs Service about a month ago and raised concerns over its potential to increase costs, drive inflation, and reduce trade competitiveness—especially during a delicate phase of economic recovery.
           </p>
 
           <p>
-            According to the Intergovernmental Panel on Climate Change (IPCC),
-            crop yields in some parts of West Africa could decline by up to 20%
-            by 2050 due to climate stressors. For governments in the region, the
-            urgency to act is clear. However, enacting robust climate policies
-            that align with international frameworks such as the Paris Agreement
-            remains fraught with economic, social, and political challenges.
+          "Following extensive consultations with industry stakeholders, trade experts, and relevant government officials, it has become clear that the implementation of the 4% FOB charge poses significant challenges to Nigerian trade facilitation, the business environment, and economic stability," Edun said in a statement. Importers and business groups had warned that the levy would increase the cost of goods, fuel inflation, and hurt Nigeria's trade competitiveness at a time when the country was trying to end currency volatility and sluggish growth.
           </p>
 
           <p>
-            Implementing climate-friendly technologies requires substantial
-            investment, yet access to global climate finance remains limited for
-            many West African countries. Bureaucratic hurdles and stringent
-            eligibility requirements mean that international funding pledges
-            often fail to materialize on the ground.
+          The suspension will allow for a comprehensive review of the levy's framework and its broader economic implications, the ministry said, adding that it would work with the customs service and other stakeholders to develop a more "equitable and efficient revenue structure".
+          Nigeria, Africa's largest economy, has been seeking to boost non-oil revenues amid declining crude output and mounting fiscal pressures. But businesses have pushed back against what they see as arbitrary levies that complicate trade and raise costs.
           </p>
         </article>
 
@@ -80,7 +68,7 @@ const Politics = () => {
               className="bg-white rounded-xl shadow hover:shadow-md transition p-4 flex flex-col"
             >
               <img
-                src="./related1.png"
+                src="./Image (2).png"
                 alt="Deforestation in Africa"
                 className="rounded-lg mb-4 h-40 w-full object-cover"
               />
@@ -99,7 +87,7 @@ const Politics = () => {
               className="bg-white rounded-xl shadow hover:shadow-md transition p-4 flex flex-col"
             >
               <img
-                src="./related2.png"
+                src="./Image (2).png"
                 alt="Renewable energy in Africa"
                 className="rounded-lg mb-4 h-40 w-full object-cover"
               />
@@ -118,7 +106,7 @@ const Politics = () => {
               className="bg-white rounded-xl shadow hover:shadow-md transition p-4 flex flex-col"
             >
               <img
-                src="./related3.png"
+                src="./Image (2).png"
                 alt="Flooding in Nigeria"
                 className="rounded-lg mb-4 h-40 w-full object-cover"
               />
@@ -133,6 +121,8 @@ const Politics = () => {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 };

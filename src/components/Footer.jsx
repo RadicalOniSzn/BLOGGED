@@ -1,13 +1,57 @@
-import React from 'react'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FacebookIcon from "../assets/Facebook.svg?react";
 import TwitterIcon from "../assets/Twitter.svg?react";
 import InstagramIcon from "../assets/Instagram.svg?react";
 import LinkedinIcon from "../assets/Linkedin.svg?react";
+import emailjs from "@emailjs/browser";
+
 
 
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    address: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!formData.email) {
+      setStatus("Please enter a valid email.");
+      return;
+    }
+
+    emailjs
+      .send(
+        "service_zojowrk",   //  Your EmailJS Service ID
+        "template_v7bu9j9",  //  Your Template ID
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_address: formData.address,
+        },
+        "qbYRQc9-bh_0vHo5H"    //  Public Key
+      )
+      .then(
+        () => {
+          setStatus("Subscription successful! 🎉");
+          setFormData({ name: "", email: "", address: "" });
+        },
+        (error) => {
+          console.error(error);
+          setStatus("Something went wrong. Please try again.");
+        }
+      );
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-300 px-6 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -61,21 +105,47 @@ const Footer = () => {
 
         
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Subscribe</h3>
-          <p className="text-gray-400 mb-4">Get the latest updates right in your inbox.</p>
-          <form className="flex flex-col sm:flex-row gap-3">
+          <h3 className="text-white font-semibold mb-4">Subscribe</h3>
+          <p className="text-sm mb-4">Stay updated with our latest articles and news.</p>
+
+          <form onSubmit={sendEmail} className="space-y-3">
+            
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              className="w-full px-3 py-2 bg-gray-800 rounded-lg text-sm focus:outline-none"
+            />
+
             <input
               type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 rounded-lg text-gray-900 w-full focus:outline-none"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              className="w-full px-3 py-2 bg-gray-800 rounded-lg text-sm focus:outline-none"
             />
+
+            <input
+              type="text"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              placeholder="Your Address"
+              className="w-full px-3 py-2 bg-gray-800 rounded-lg text-sm focus:outline-none"
+            />
+
             <button
               type="submit"
-              className="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-700"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg text-sm font-medium"
             >
               Subscribe
             </button>
           </form>
+
+          {status && <p className="mt-2 text-xs text-green-400">{status}</p>}
         </div>
       </div>
 
