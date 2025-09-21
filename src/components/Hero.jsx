@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="flex flex-wrap items-center text-xs sm:text-sm text-gray-500 pb-5 gap-2">
         <p>By Sarah Johnson</p>
         <img src="./Vector@2x.png" alt="" className="w-4 h-4" />
-        <p className="px-2 sm:px-3">June 15, 2023</p>
+        <p className="px-2 sm:px-3">Sept 15, 2025</p>
       </div>
 
       

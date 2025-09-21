@@ -26,8 +26,6 @@ const Home = () => {
     <div className='overflow-hidden bg-gray-100'>
         <Nav />
         <Hero/>
-        {/* <LatestArticle/> */}
-        {/* <Menu/> */}
         <ChooseCategory/>
         <Card  Card={featuredData}/>
         <Footer/>

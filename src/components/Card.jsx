@@ -57,6 +57,7 @@ const categoryColors = {
 const CardGrid = () => {
   const data = [
     {
+      id:1,
       image: "/Image (1).png",
       category: "Featured",
       date: "June 12, 2023",
@@ -66,6 +67,7 @@ const CardGrid = () => {
       author: "Micheal Chen",
     },
     {
+      id:2,
       image: "./Imagee.png",
       category: "Politics",
       date: "July 20, 2023",
@@ -75,6 +77,7 @@ const CardGrid = () => {
       author: "Aisha Bello",
     },
     {
+      id:3,
       image: "/Image (1).png",
       category: "Business",
       date: "Aug 5, 2023",
@@ -83,6 +86,7 @@ const CardGrid = () => {
       author: "John Doe",
     },
     {
+      id:4,
       image: "/Image (1).png",
       category: "Science",
       date: "Sep 1, 2023",
@@ -91,6 +95,7 @@ const CardGrid = () => {
       author: "Sarah Lin",
     },
     {
+      id:5,
       image: "/Image (1).png",
       category: "Culture",
       date: "Sep 10, 2023",
@@ -99,6 +104,7 @@ const CardGrid = () => {
       author: "Carlos Vega",
     },
     {
+      id:6,
       image: "/Image (1).png",
       category: "Technology",
       date: "Sep 15, 2023",
@@ -119,4 +125,4 @@ const CardGrid = () => {
   );
 };
 
-export default CardGrid;
+export default Card;
