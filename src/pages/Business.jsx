@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const Business = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-hidden bg-gray-100">
       <Nav />
 
       <div className="w-full">
