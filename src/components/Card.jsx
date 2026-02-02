@@ -1,41 +1,34 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ image, category, date, title, description, author }) => {
+const Card = ({ _id,images, categories, createdAt, title, content, author }) => {
   return (
     <div className="bg-white rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col">
-      
-      <img
-        src={image}
-        alt={title}
-        className="rounded-t-2xl w-full h-48 md:h-60 lg:h-72 object-cover"
-      />
-
+      {/* {images?.map((img)=> <img src={img.url} />)} */}
+      <img className="h-77 object-cover" src={images ? images[0].url : ""} alt="" />
       <div className="flex flex-col flex-grow p-4">
         <div className="flex justify-between items-center mb-3">
           <Link
-            
-            
             className={`text-xs px-3 py-1 rounded-full font-medium transition ${
-              categoryColors[category] || "bg-gray-100 text-gray-600"
+              "bg-gray-100 text-gray-600"
             }`}
           >
-            {category}
+            {categories ? categories[0]?.name : ""}
+            {/* {categories?.map((cat)=> cat)} */}
           </Link>
 
           <div className="flex items-center gap-2 text-gray-500 text-xs">
             <img src="./Vector@2x.png" alt="calendar" className="w-4 h-4" />
-            <p>{date}</p>
+            <p>{createdAt}</p>
           </div>
         </div>
 
         <h3 className="text-lg font-bold mb-2">{title}</h3>
 
-        <p className="text-sm text-gray-600 flex-grow">{description}</p>
+        <p className="text-sm text-gray-600 flex-grow">{content}</p>
 
         <div className="flex justify-between items-center text-sm text-gray-500 mt-4">
-          <span>By {author}</span>
-          <Link to="/" className="text-blue-600 font-medium hover:underline">
+          <span>By {author?.firstname}</span>
+          <Link to={_id} className="text-blue-600 font-medium hover:underline">
             Read More
           </Link>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,9 @@ const Nav = () => {
           </Link>
           <Link to="/culture" className="text-gray-700 hover:text-blue-600 text-sm font-medium">
             Culture
+          </Link>
+          <Link to="/register">
+            <Button>Register</Button>
           </Link>
         </div>
 

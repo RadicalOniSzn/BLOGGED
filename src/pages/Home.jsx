@@ -21,13 +21,18 @@ const featuredData = [
 ]
 
 
+
+
+
 const Home = () => {
+
   return (
     <div className='overflow-hidden bg-gray-100'>
         <Nav />
         <Hero/>
         <ChooseCategory/>
         <Card  Card={featuredData}/>
+
         <Footer/>
 
     </div>
